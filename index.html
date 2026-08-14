@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Col d'Orcia — Sostenibilità 2024</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Intestazione fissa: logo, menu di navigazione (con ancore alle sezioni) e pulsante hamburger per mobile -->
+  <header class="topbar">
+    <img src="Cdo-logo-montalcino.jpg" alt="Logo Col d'Orcia" class="top-logo" />
+    <nav class="nav" id="navMenu">
+      <a href="#azienda">Azienda</a>
+      <a href="#ambiente">Ambiente</a>
+      <a href="#persone">Persone</a>
+      <a href="#contatti">Contatti</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Apri menu">Menu</button>
+  </header>
+
+  <main class="wrap">
+    <!-- Hero: titolo principale di apertura pagina con immagine a fianco -->
+    <section class="hero" id="hero">
+      <div class="hero-header">
+        <div>
+          <h1>Col d’Orcia: tradizione che guarda al futuro</h1>
+          <div class="eyebrow">"obsessed by nature"</div>
+        </div>
+        <div class="hero-image">
+          <img src="vino1.jpg" alt="Vino Col d'Orcia" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Sezione report: immagine di sfondo con overlay e pulsante per scaricare il PDF -->
+    <section class="section report-card" id="report">
+      <div class="report-media">
+        <div class="report-overlay">
+          <div class="kicker">Report</div>
+          <h2>Bilancio di sostenibilità 2024</h2>
+          <div class="report-actions">
+            <a href="/docs/report_sostenibilita_2024.pdf" class="button-download" download>Scarica report</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sezione Azienda: testo introduttivo e griglia di numeri chiave (statistiche) -->
+    <section class="section" id="azienda">
+      <div class="kicker">Azienda</div>
+      <h2>Numeri chiave</h2>
+      <p class="lede">Col d’Orcia unisce tradizione vitivinicola e visione contemporanea, costruendo il proprio modello di crescita su qualità, responsabilità e attenzione al territorio. Ogni scelta aziendale è orientata a valorizzare il legame tra la terra, il lavoro umano e il valore del vino prodotto.</p>
+      <div class="stats">
+        <div class="stat"><span>520</span><small>ettari</small></div>
+        <div class="stat"><span>148</span><small>ettari vitati</small></div>
+        <div class="stat"><span>12</span><small>uvaggi</small></div>
+        <div class="stat"><span>650k</span><small>bottiglie/anno</small></div>
+      </div>
+    </section>
+
+    <!-- Sezione Ambiente: card con indicatori ambientali + grafico a barre con le categorie di CO2 (riempito via JS) -->
+    <section class="section" id="ambiente">
+      <div class="kicker">Ambiente</div>
+      <h2>Impatto ambientale</h2>
+      <p class="lede">La sostenibilità ambientale è per Col d’Orcia un principio concreto, presente in ogni fase della produzione, dalla coltivazione alla trasformazione. Il report mette in evidenza come la cura del territorio, l’uso responsabile delle risorse e la riduzione degli impatti siano parte integrante della visione aziendale.</p>
+      <div class="cards">
+        <div class="card">
+          <strong>1.346 t</strong>
+          <p>Emissioni di CO₂ misurate nell’anno</p>
+        </div>
+        <div class="card">
+          <strong>1,91 kg</strong>
+          <p>CO₂e per litro di vino prodotto</p>
+        </div>
+        <div class="card">
+          <strong>1.867 m³</strong>
+          <p>Acqua utilizzata con attenzione ai consumi</p>
+        </div>
+        <div class="card">
+          <strong>173</strong>
+          <p>Indice di biodiversità sul territorio</p>
+        </div>
+      </div>
+      <div class="bars">
+        <p class="lede ambiente-lede">Le principali categorie di impatto con le tonnellate di CO₂ equivalente</p>
+        <div class="bar-row">
+          <span>Materiali per il confezionamento (soprattutto vetro)</span>
+          <div class="bar-track"><div class="bar-fill" data-pct="26"></div></div>
+          <div class="bar-meta"><b>26%</b><small class="co2">~350 t CO₂e</small></div>
+        </div>
+        <div class="bar-row">
+          <span>Energia elettrica da rete</span>
+          <div class="bar-track"><div class="bar-fill" data-pct="17"></div></div>
+          <div class="bar-meta"><b>17%</b><small class="co2">~230 t CO₂e</small></div>
+        </div>
+        <div class="bar-row">
+          <span>Combustione mobile (gasolio agricolo e veicoli)</span>
+          <div class="bar-track"><div class="bar-fill" data-pct="17"></div></div>
+          <div class="bar-meta"><b>~17%</b><small class="co2">~220 t CO₂e</small></div>
+        </div>
+        <div class="bar-row">
+          <span>Spostamenti casa-lavoro dipendenti</span>
+          <div class="bar-track"><div class="bar-fill" data-pct="15"></div></div>
+          <div class="bar-meta"><b>~15%</b><small class="co2">~210 t CO₂e</small></div>
+        </div>
+        <div class="bar-row">
+          <span>Combustione stazionaria (GPL)</span>
+          <div class="bar-track"><div class="bar-fill" data-pct="3.6"></div></div>
+          <div class="bar-meta"><b>3.6%</b><small class="co2">~50 t CO₂e</small></div>
+        </div>
+        <div class="bar-row">
+          <span>Materie prime acquistate (uva e vino sfuso)</span>
+          <div class="bar-track"><div class="bar-fill" data-pct="3.5"></div></div>
+          <div class="bar-meta"><b>3.5%</b><small class="co2">~47 t CO₂e</small></div>
+        </div>
+        <div class="bar-row">
+          <span>Trasporti in ingresso</span>
+          <div class="bar-track"><div class="bar-fill" data-pct="3"></div></div>
+          <div class="bar-meta"><b>~3%</b><small class="co2">~38 t CO₂e</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sezione Persone: due tab (Lavoratori/Territorio) che mostrano un pannello di contenuto alla volta, gestite via JS -->
+    <section class="section" id="persone">
+      <div class="kicker">Persone</div>
+      <h2>Team e territorio</h2>
+      <p class="lede">Il valore di Col d’Orcia si misura anche attraverso il rapporto con le persone che lavorano ogni giorno nel territorio e contribuiscono a costruire una filiera forte e condivisa. La capacità di crescere insieme a dipendenti, collaboratori e comunità locale rappresenta una parte essenziale della sostenibilità aziendale.</p>
+      <div class="tabs" role="tablist">
+        <button class="tab active" data-tab="lavoratori" type="button">Lavoratori</button>
+        <button class="tab" data-tab="territorio" type="button">Territorio</button>
+      </div>
+      <!-- Pannello "Lavoratori", attivo di default -->
+      <div class="panel active" data-panel="lavoratori">
+        <div class="cards">
+          <div class="card"><strong>97</strong><p>dipendenti</p></div>
+          <div class="card"><strong>46</strong><p>età media</p></div>
+          <div class="card"><strong>223 h</strong><p>formazione</p></div>
+          <div class="card"><strong>10,8%</strong><p>turnover</p></div>
+        </div>
+      </div>
+      <!-- Pannello "Territorio", nascosto finché l'utente non clicca la relativa tab -->
+      <div class="panel" data-panel="territorio">
+        <p class="lede">Collaborazioni locali e progetti sul territorio per una filiera più forte e sostenibile.</p>
+        <div class="badges">
+          <span class="badge">AMFORI BSCI</span>
+          <span class="badge">Slow Wine Coalition</span>
+          <span class="badge">Fondazione Brunello</span>
+          <span class="badge">Montalcino Bio</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sezione Contatti: recapiti aziendali in una griglia -->
+    <section class="contact" id="contatti">
+      <h2>Contatti</h2>
+      <p class="lede">Per conoscere meglio Col d’Orcia, approfondire il suo lavoro o ricevere ulteriori informazioni, è possibile contattare l’azienda direttamente tramite i seguenti recapiti.</p>
+      <div class="row">
+        <div class="item">
+          <strong>Email</strong>
+          <p><a href="mailto:info@coldorcia.it">info@coldorcia.it</a></p>
+        </div>
+        <div class="item">
+          <strong>Telefono</strong>
+          <p>[+39 0577 80891]</p>
+        </div>
+          <div class="item">
+            <strong>Instagram</strong>
+            <p><a href="https://www.instagram.com/coldorcia/" target="_blank" rel="noopener">@coldorcia</a></p>
+          </div>
+          <div class="item">
+            <strong>Sito ufficiale</strong>
+            <p><a href="https://coldorcia.it/" target="_blank" rel="noopener">coldorcia.it</a></p>
+          </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
