@@ -1,3 +1,4 @@
+/* variabili colore + reset di base */
 :root {
   --bg: #f4ece6;
   --text: #2a1d1b;
@@ -46,6 +47,7 @@ embed {
   padding: 26px 26px;
 }
 
+/* header: barra in alto, menu di navigazione e hamburger mobile */
 .topbar {
   display: flex;
   align-items: center;
@@ -88,6 +90,7 @@ embed {
   color: var(--brand);
 }
 
+/* animazione di entrata delle sezioni al caricamento/scroll (gestita insieme al JS) */
 .hero,
 .section {
   opacity: 0;
@@ -101,13 +104,12 @@ embed {
   transform: none;
 }
 
-/* Applicata alle sezioni già visibili al caricamento della pagina:
-   evita che si vedano "animare" subito, comparendo invece senza transizione */
 .hero.no-anim,
 .section.no-anim {
   transition: none;
 }
 
+/* hero: riquadro di apertura con titolo e immagine */
 .hero {
   padding: 0 0 0 20px;
   margin: 24px 0;
@@ -143,7 +145,7 @@ embed {
 }
 
 
-/* small logo in header */
+/* piccolo logo nell'intestazione */
 .top-logo {
   max-height: 64px;
   width: auto;
@@ -153,7 +155,7 @@ embed {
 
 .eyebrow {
   font-size: 0.95rem;
-  font-style: italic; 
+  font-style: italic;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--brand);
@@ -183,6 +185,8 @@ embed {
   transition: background 0.2s ease, color 0.2s ease;
 }
 
+/* stile comune alle sezioni con class="section" (Report, Azienda, Ambiente, Persone) */
+/* i Contatti usano una classe .contact a parte (vedi più sotto), simile ma non identica */
 .section {
   padding: 36px 32px;
   margin: 24px 0;
@@ -218,6 +222,7 @@ embed {
   color: var(--text);
 }
 
+/* griglie di statistiche e card usate nelle varie sezioni */
 .stats,
 .cards {
   display: grid;
@@ -252,6 +257,7 @@ embed {
   letter-spacing: 0.01em;
 }
 
+/* tab e pannelli della sezione Persone (switch gestito da JS) */
 .tabs {
   display: flex;
   flex-wrap: wrap;
@@ -282,9 +288,9 @@ embed {
   display: block;
 }
 
-/* Report media card */
+/* riquadro con foto di sfondo per il report */
 .report-card { padding: 0; margin: 24px 0; border-radius: 34px; overflow: hidden; }
-.report-media { background-image: url('vigneti.jpg'); background-size: cover; background-position: center; min-height: 260px; display:block; }
+.report-media { background-image: url('img/vigneti.jpg'); background-size: cover; background-position: center; min-height: 260px; display:block; }
 .report-overlay { background: linear-gradient(180deg, rgba(0,0,0,0.28), rgba(0,0,0,0.12)); color: #fff; padding: 34px; max-width: 860px; }
 .report-overlay .lede { color: #fff; }
 .report-overlay .kicker { color: rgba(255,255,255,0.9); }
@@ -293,7 +299,7 @@ embed {
 .report-actions .button-download { background: rgba(255,255,255,0.95); color: var(--brand); }
 .report-actions .button-download:hover { background: var(--brand); color: #fff; }
 
-/* Contacts */
+/* sezione contatti */
 .contact {
   padding: 28px 32px;
   margin: 24px 0;
@@ -328,6 +334,7 @@ embed {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
+/* grafico a barre della sezione Ambiente, riempito via JS */
 .bars {
   display: grid;
   gap: 16px;
@@ -381,6 +388,7 @@ embed {
   text-align: right;
 }
 
+/* versione mobile/tablet */
 @media (max-width: 780px) {
   .topbar {
     flex-direction: column;
@@ -443,4 +451,3 @@ embed {
     max-width: 100%;
   }
 }
-
