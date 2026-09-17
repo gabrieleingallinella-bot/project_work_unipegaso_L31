@@ -6,7 +6,7 @@ const tabs = document.querySelectorAll('.tab');
 const panels = document.querySelectorAll('.panel');
 const sections = document.querySelectorAll('.hero, .section');
 
-// apre/chiude il menu mobile al click sull'hamburger
+// apre/chiude il menu mobile al click sul bottone
 menuBtn?.addEventListener('click', () => {
   navMenu.classList.toggle('open');
 });
